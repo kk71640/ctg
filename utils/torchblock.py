@@ -14,6 +14,7 @@ def Block(settings, in_channels, out_channels, kernel_size=1, stride=1, padding=
     modules = {
         'ct': nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride, padding),
         'cv': nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding, dilation, bias=bias),
+        'cv1d': nn.Conv1d(in_channels, out_channels, kernel_size, stride, padding, dilation, bias=bias),
         'ln': nn.Linear(in_channels, out_channels),
         'bn': nn.BatchNorm2d(out_channels),
         'bn1d': nn.BatchNorm1d(out_channels),
