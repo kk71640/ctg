@@ -1,0 +1,11 @@
+{
+  "model_name": "simple_model",
+  "batch_size": 10,
+  "num_epochs": 100,
+  "ngpu": 4,
+  "num_workers": 4,    
+  "lr": 0.0002,
+  "uaph_path": "./data/ctu/uaph.csv",
+  "data_path": "./data/ctu/ctu_csv/",
+  "uaph_threshold": 7.05
+}
