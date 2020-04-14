@@ -1,4 +1,4 @@
-from logging import getLogger, DEBUG, StreamHandler, Formatter, FileHandler
+from logging import getLogger, DEBUG, INFO, StreamHandler, Formatter, FileHandler
 import os, sys, shutil, datetime
 
 # i.e.
@@ -31,9 +31,12 @@ class NewLogger():
         self.logger.addHandler(file_handler)
 
         console_handler = StreamHandler(sys.stdout)
-        console_handler.setLevel(DEBUG)
+        console_handler.setLevel(INFO)
         console_handler.setFormatter(handler_format)
         self.logger.addHandler(console_handler)
 
     def debug(self, sentence):
         self.logger.debug(sentence)
+        
+    def info(self, sentence):
+        self.logger.info(sentence)
